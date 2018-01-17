@@ -290,6 +290,7 @@ function greet(name) {
 
 ### requireReturnType
 
+If you use flowtype and esdoc + esdoc-flow-plugin or documentation.js, documentation of the types will be automatic, thus no need to specify return type manually.
 Example of additional **correct** code for this rule with the `"requireReturnType": false` option:
 
 ```js
@@ -334,6 +335,25 @@ Example of additional **correct** code for this rule with the `"requireParamDesc
  * Add two numbers.
  * @param {int} num1
  * @param {int} num2
+ * @returns {int} The sum of the two numbers.
+ */
+function add(num1, num2) {
+    return num1 + num2;
+}
+```
+
+### requireParamType
+
+If you use flowtype and esdoc + esdoc-flow-plugin or documentation.js, documentation of the types will be automatic, thus no need to specify return type manually.
+Example of additional **correct** code for this rule with the `"requireParamType": false` option:
+
+```js
+/*eslint valid-jsdoc: ["error", { "requireParamType": false }]*/
+
+/**
+ * Add two numbers.
+ * @param num1
+ * @param num2
  * @returns {int} The sum of the two numbers.
  */
 function add(num1, num2) {
